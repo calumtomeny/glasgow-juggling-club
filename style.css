@@ -11,7 +11,7 @@ body {
 header {
   float: left;
   height: 100vh;
-  width: 30vw;
+  width: 30%;
   background-color: #E8E2CF;
   
   padding-top: 50px;
@@ -21,7 +21,7 @@ header {
 
 .main {
   float: left;
-  width: 70vw;
+  width: 70%;
   height: 100vh;
   overflow: scroll;
   background-color: #f9de49;
@@ -115,12 +115,12 @@ a {
   header {
     float: none;
     height: auto;
-    width: 100vw;
+    width: 100%;
     padding: 50px 10% 40px 10%;
   }
   
   .main {
-    width: 100vw;
+    width: 100%;
     height: auto;
     overflow: auto;
     padding-top: 40px;
