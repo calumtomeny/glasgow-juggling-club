@@ -8,7 +8,7 @@
 @font-face {
   font-family: 'Space Grotesk';
   font-weight: 500;
-  src: url(../fonts/spacegrotesk-semibold.woff') format('woff'),
+  src: url('../fonts/spacegrotesk-semibold.woff') format('woff'),
     url('../fonts/spacegrotesk-semibold.woff2') format('woff2');
 }
 
