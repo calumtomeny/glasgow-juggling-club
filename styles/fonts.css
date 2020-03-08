@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  font-weight: 400;
+  src: url('../fonts/spacegrotesk-regular.woff') format('woff'),
+    url('../fonts/spacegrotesk-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-weight: 500;
+  src: url('../fonts/spacegrotesk-semibold.woff') format('woff'),
+    url('../fonts/spacegrotesk-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Le Murmure';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/le-murmure-regular.woff') format('woff'),
+    url('../fonts/le-murmure-regular.woff2') format('woff2');
+}
