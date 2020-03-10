@@ -79,17 +79,27 @@ a {
 }
 
 .button {
-	background-color: #f24657;
-	padding: 20px 30px 20px 30px;
+	background-color: #510550;
+	padding: 24px 30px 20px 30px;
 	margin-bottom: 17px;
-	border-radius: 2px;
+	border-radius: 4px;
 	letter-spacing: 0.6px;
-	cursor: pointer;
 	text-decoration: none;
 	color: #fff;
 	font-weight: 500;
 	text-transform: uppercase;
 	display: block;
+}
+
+.button:focus {
+	border: 2px solid #ffddff;
+	padding: 22px 28px 18px 28px;
+	
+}
+
+.button:hover {
+	background-color: #2d032c;
+	
 }
 
 
