@@ -2,6 +2,8 @@
 
 This is the website of Glasgow Juggling Club
 
+[![Build Status](https://dev.azure.com/tomeny/glasgowjugglingclub/_apis/build/status/glasgowjugglingclub-CI?branchName=master)](https://dev.azure.com/tomeny/glasgowjugglingclub/_build/latest?definitionId=5&branchName=master)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
