@@ -21,7 +21,7 @@ header {
 	float: left;
 	width: 70%;
 	height: 100vh;
-	overflow: scroll;
+	overflow-y: scroll;
 	background-color: #f9de49;
 	background-image: url(../images/gjc-pattern.svg);
 	padding: 80px 100px 100px 100px;
@@ -149,7 +149,7 @@ a {
 	.main {
 	width: 100%;
 	height: auto;
-	overflow: auto;
+	overflow-y: scroll;
 	padding-top: 40px;
 	}
 	
