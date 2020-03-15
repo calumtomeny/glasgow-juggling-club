@@ -34,4 +34,8 @@ If you're using VS Code then you can now use the live server feature to serve th
 
 Run the sass watch command which will cause the style.css file to be regenerated when any of the scss files are changed.
 
+```
+npm run watch:sass
+```
+
 
