@@ -1,0 +1,24 @@
+{
+  "name": "glasgow-juggling-club",
+  "version": "1.0.0",
+  "description": "The website for Glasgow Juggling Club.",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "node-sass -r --output-style compressed sass/style.scss -o styles/",
+    "watch:sass": "npm run build:sass && npm run build:sass -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calumtomeny/glasgow-juggling-club.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calumtomeny/glasgow-juggling-club/issues"
+  },
+  "homepage": "https://github.com/calumtomeny/glasgow-juggling-club#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
