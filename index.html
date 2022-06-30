@@ -1,92 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Glasgow Juggling Club – weekly circus skills practice</title>
-		<meta name="description" content="We meet every Wednesday at 7:30pm to juggle, practice circus skills, drink tea, and have a chat">
-		<meta property="og:title" content="Glasgow Juggling Club">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://www.glasgowjugglingclub.com">
-		<meta property="og:description" content="We meet every Wednesday at 7:30pm to juggle, practice circus skills, drink tea, and have a chat">
-		<meta property="og:description" content="images/gjc-sharingimage.jpg">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@glasgowjuggling">
-		<meta name="twitter:title" content="Glasgow Juggling Club">
-		<meta name="twitter:description" content="We meet every Wednesday at 7:30pm to juggle, practice circus skills, drink tea, and have a chat">
-		<meta name="twitter:image" content="images/gjc-sharingimage.jpg">
-		<link rel="stylesheet" href="styles/style.css">
-		<link rel="icon" href="images/favicon.ico" />
+		<meta name="theme-color" content="#FFFF80">
+		<title>GJC Logo Animation</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<header>
-		  <div class="key-info">
-			  <h1>
-			    <!-- Glasgow Juggling Club -->
-				<img src="images/gjc-logo.svg" alt="Glasgow Juggling Club"/>
-			  </h1>
-			  <h2>
-			    Every Wednesday
-			  </h2>
-			  <h2>7:30<span class="subscript">pm</span></h2>
-		  </div>
-		</header>
 		
-		<section class="main">
-		  <div class="infoblock container">
-		    <h2>
-		      The Scout Hall
-		    </h2>
-		    <h2>75 Kelbourne Street<br />Kelvinside, G20 8PR</h2>
-		    <p>
-		      <a href="https://www.google.com/maps/place/76+Kelbourne+St,+Glasgow+G20+8PR/@55.8826055,-4.2879946,537m/data=!3m2!1e3!4b1!4m5!3m4!1s0x488845cab97f081f:0xe6a7093405a92e4e!8m2!3d55.8826055!4d-4.2858059?hl=en" target="blank">Find us on Google Maps</a>
-		    </p>
-		  </div>
+		<h1>
+			<object type="image/svg+xml" data="images/gjc-logo.svg" id="svg-logo" class="logo"">
+				Glasgow Juggling Club
+			</object>
+		</h1>
 		
-		  <div class="infoblock container">
-		    <h2>
-		      First time is free
-		    </h2>
-		    <p>
-		      then £2.50 each week <br/> you can also pay in bitcoin ₿ or eth ♦
-		    </p>
-		  </div>
+		<div class="banner">
+			<div class="banner-text">
+				<h2>Every Wednesday</h2>
+				<h2>7:30pm–9:30pm</h2>
+				<h2>All Welcome!</h2>
+			</div>
+		</div>
 		
-		  <div class="infoblock container">
-		    <h2>
-		      All skill levels welcome
-		    </h2>
-		    <p>
-		      (under 16s please bring an adult)
-		    </p>
-		  </div>
+		<div class="logo-bg-container"></div>
 		
-		  <div class="infoblock container">
-		    <h2>
-		      Any questions? Hit us up:
-		    </h2>
-		    <p>
-		      <a
-		        href="mailto&#58;h&#101;l%6Co&#64;g&#108;a&#115;gowj&#37;75gg&#108;in&#103;c&#108;&#117;b&#46;c&#111;%&#54;D"
-		        >hello&#64;glasgowjug&#103;l&#105;ngc&#108;u&#98;&#46;&#99;&#111;m</a
-		      >
-		    </p>
-		  </div>
+		<div class="logo-bg-pattern"></div>
 		
-		  <div class="contact container">
-		    <h2>Want to keep up with Glasgow&nbsp;Juggling&nbsp;Club?</h2>
-		    <a href="https://www.facebook.com/groups/glasgowjugglingclub/" target="blank" class="button"
-		      >Join our Facebook Group</a
-		    >
-		    <a href="https://www.instagram.com/glasgowjugglingclub/" target="blank" class="button"
-		      >Follow us on Instagram</a
-		    >
-		    <a href="https://mailchi.mp/619b1cd7a519/gjc_email_list" target="blank" class="button"
-		      >Join our email list</a
-		    >
-		  </div>
-		</section>
+		<div class="content-container">
+			<section>
+				<h2>The Scout Hall</h2>
+				<h3><span>75 </span><span>Kelbourne </span><span>Street</span></h3>
+			</section>
+			<section>
+				<h2>£2.50 / week</h2>
+				<p>cash, contactless, ₿ or eth ♦</p>
+				<h3><span>First time </span><span>is free!</span></h3>
+			</section>
+			<section>
+				<h3><span>All skill levels </span><span>welcome</span></h3>
+				<p>(under 16s please bring an adult)</p>
+			</section>
+		</div>		
 		
 	</body>
 </html>
+<script src="scroll.js"></script>
+<script src="text-animation.js"></script>
