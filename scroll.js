@@ -49,7 +49,7 @@ function addScrollBehaviour(){
 		}
 
 		bg.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
-		bannerText.style.transform = 'translate(' + (0-(scrollPosition * 65)) + '%)';
+		// bannerText.style.transform = 'translate(' + (0-(scrollPosition * 65)) + '%)';
 
 		
 	})

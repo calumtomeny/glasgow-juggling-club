@@ -2,7 +2,7 @@
   --scout-hall: #FFFF80;
   --dusk: #352083;
   --secondary: #FDCECD;
-  --left-indent: 30px;
+  --left-indent: 26px;
   --wedge-height: 300px;
 }
 
@@ -24,6 +24,8 @@ body {
   font-family: Cabinet Grotesk, Helvetica, San Francisco, sans-serif;
   line-height: 1.5;
   font-weight:700;
+  /* letter-spacing: 0.01em; */
+  letter-spacing: -0.02em;
   -webkit-text-size-adjust: none;
 }
 
@@ -97,42 +99,43 @@ h3 span {
   background-color: var(--secondary);
   position: fixed;
   top: var(--wedge-height);
-  left: -20px;
+  left: -40px;
   transform: rotate(-15deg);
   transform-origin: 0% 50%;
-  padding: 10px 50px;
+  padding: 10px 50px 10px 70px;
   width: calc(100% + 80px);
   z-index: 5;
 }
 
 .banner-text{
   /* width: 200%; */
-  display:block;
+  /* display:block; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin: 0 20px 0 0; */
 }
 
 .banner h2 {
   color: var(--dusk);
-  font-size: 0.875em;
-  margin-right: 1.5rem;
-  display: inline;
-}
+  font-size: 0.8em;
 
-.banner h2::after {
-  content: "•";
-  margin-left: 1.5rem;
+  
+  /* margin-right: 1.5rem; */
+  display: inline;
 }
 
 .content-container{
   width: 100%;
   overflow: hidden;
   background-color: var(--dusk);
-  padding-top: 400px;
+  padding-top: 370px;
 }
 
 section {
   padding-left: var(--left-indent);
   width: 100%;
-  padding-bottom: 50vh;
+  padding-bottom: 20vh;
 }
 
 section:last-child {
@@ -161,10 +164,10 @@ section:last-child {
   100% { opacity: 0; transform: translateX(80px, 80px) rotate(0deg); }
 }
 
-@media (min-width:440px) {
+@media (min-width:470px) {
   
   html{
-    font-size: 24px;
+    font-size: 22px;
   }  
   h3 span {
     /* font-size: 4rem; */
@@ -186,16 +189,21 @@ section:last-child {
 @media (min-width:1200px) {
   
   html{
-    font-size: 36px;
+    font-size: 32px;
   }
   
   :root {
-    --left-indent: 45%;
+    --left-indent: 40%;
     --wedge-height: 480px;
   }
   
   body {
     font-weight: 650;
+  }
+  
+  .banner-text {
+    margin: 0 40px 0 calc(var(--left-indent) + 14px);
+    max-width: 700px;
   }
   
   h3 span {
@@ -204,6 +212,11 @@ section:last-child {
   
   .logo {
     width: 350px
+  }
+  
+  .banner {
+    left: -40px;
+    width: calc(100% + 120px);
   }
   
   
