@@ -8,9 +8,6 @@
 
 @font-face {
   font-family: 'Cabinet Grotesk';
-  /* src: url('fonts/CabinetGrotesk-Bold.woff2') format('woff2'), url('fonts/CabinetGrotesk-Bold.woff') format('woff');
-  font-weight: 200;
-  font-display: swap;*/
   src: url('../fonts/CabinetGrotesk-Variable.woff2') format('woff2'), url('../fonts/CabinetGrotesk-Variable.woff') format('woff');
   font-style: normal;
 }
@@ -24,7 +21,7 @@ body {
   width: 100%;
   color: var(--scout-hall);
   background-color: var(--dusk);
-  font-family: Helvetica, San Francisco, sans-serif;
+  font-family: Cabinet Grotesk, Helvetica, San Francisco, sans-serif;
   line-height: 1.5;
   font-weight:700;
   -webkit-text-size-adjust: none;
