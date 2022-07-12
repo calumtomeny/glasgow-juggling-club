@@ -4,7 +4,7 @@ const fadeIn = function () {
   
   sections.forEach(section =>{
 	let delay = 0.1
-	const animatedTags = section.querySelectorAll("h2, p, h3 span, img")
+	const animatedTags = section.querySelectorAll("h2 span, p, h3 span, img")
 
 	animatedTags.forEach(tag => {
 		tag.style.opacity = 0
