@@ -1,5 +1,6 @@
 const logo = document.getElementById("svg-logo")
-const bg = document.querySelector(".logo-bg-pattern")
+const bgCW = document.querySelector(".spiral-pattern-cw")
+const bgCCW = document.querySelector(".spiral-pattern-ccw")
 const bannerText = document.querySelector(".banner-text")
 
 // const bg = document.getElementsByClassName("bg")
@@ -48,7 +49,8 @@ function addScrollBehaviour(){
 			logoElements[element].style.transform = 'rotate(' + (scrollPosition * (0 - fullRotation) * elementIndex) + 'deg)';
 		}
 
-		bg.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
+		bgCW.style.transform = 'rotate(' + (0 - scrollPosition * 40) + 'deg) translate(-50%, -50%)';
+		bgCCW.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
 		// bannerText.style.transform = 'translate(' + (0-(scrollPosition * 65)) + '%)';
 
 		
