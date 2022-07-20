@@ -2,11 +2,19 @@
 @import 'sass/reset.scss', 'sass/fonts.scss';
 :root {
   --scout-hall: #FFFF80;
+  --sh02: #FFF6A3;
+  --sh03: #F9F989;
   --dusk: #352083;
-  --contrast: #E1DDFB;
-  --secondary: #B0EAEE;
-  --left-indent: 26px;
+  --night: #131518;
+  --dk02: #D6D0FF;
+  --dk01: #E1DDFB;
+  --up: #B0EAEE;
+  
   --wedge-height: 300px;
+  --logo-size: calc(var(--wedge-height)*0.6666666);
+  --logo-indent: calc(var(--wedge-height)*0.42);
+  
+  --left-indent: 26px;
   --angle: -15deg;
 }
 
@@ -18,12 +26,13 @@
 
 html {
   height: 100%;
-  font-size: 16px;
+  font-size: 17px;
 }
+
 
 body {
   width: 100%;
-  color: var(--contrast);
+  color: var(--dk01);
   background-color: var(--dusk);
   font-family: Cabinet Grotesk, Helvetica, San Francisco, sans-serif;
   line-height: 1.5;
@@ -70,13 +79,16 @@ h3 {
   z-index: 2;
 }
 
-.logo {
+.logo, .spiral-pattern-cw, .spiral-pattern-ccw {
   position: fixed;
-  left: 30px;
-  top: 20px;
-  width: 200px;
+  left: var(--logo-indent);
+  top: var(--logo-indent);
+}
+
+.logo {
+  width: var(--logo-size);
   z-index: 4;
-  /* transform: translateX(-50%); */
+  transform: translate(-50%, -50%);
 }
 
 .spiral-pattern-cw {
@@ -88,15 +100,10 @@ h3 {
 }
 
 .spiral-pattern-cw, .spiral-pattern-ccw {
-  width: 180vmax;
-  height: 180vmax;
-  max-width: 2000px;
-  max-height: 2000px;
-  position: fixed;
+  width: calc(var(--wedge-height)*6.3);
+  height: calc(var(--wedge-height)*6.3);
   mix-blend-mode: multiply;
   opacity: 0.6;
-  top:120px;
-  left:130px;
   transform: rotate(0deg) translate(-50%, -50%);
   transform-origin: top left;
   background-repeat: no-repeat;
@@ -125,7 +132,6 @@ h3 {
 
 .banner h2 {
   color: var(--contrast);
-  font-size: 0.8em;
   display: inline;
 }
 
@@ -170,67 +176,83 @@ section {
 @media (max-height:900px) {
   
   section:first-child {
-	padding-top: 350px;
+    padding-top: 350px;
   }
   
 }
 
-@media (min-width:470px) {
+@media (min-width:430px) {
   
   html{
-	font-size: 22px;
-  }  
-  h3 span {
-	/* font-size: 4rem; */
-  }  
+    font-size: 22px;
+  }
   
 }
 
 @media (min-width:600px) {
   
   html{
-	font-size: 24px;
+   font-size: 24px;
   }
   :root {
-	--left-indent: 40px;
+   --left-indent: 40px;
   }
-  
+
 }
 
 @media (min-width:1200px) {
   
   html{
-	font-size: 32px;
+	  font-size: 28px;
   }
   
   :root {
-	--left-indent: 40%;
-	--wedge-height: 480px;
+	  --left-indent: 40%;
+	  --wedge-height: 420px;
+    --logo-indent: calc(var(--wedge-height)*0.41);
+    --angle: -17deg;
   }
   
   body {
-	font-weight: 650;
+	  font-weight: 650;
   }
   
   .banner-text {
-	/* margin: 0 40px 0 calc(var(--left-indent) + 14px); */
-	margin: 0 40px 0 var(--left-indent);
-	/* margin: 0 40px 0 0; */
-	max-width: 700px;
+	  margin: 0 40px 0 var(--left-indent);
+	  max-width: 700px;
   }
   
   h3 span {
-	font-weight: 600;
-  }
-  
-  .logo {
-	width: 350px
+	  font-weight: 600;
   }
   
   .banner {
-	left: -40px;
-	width: calc(100% + 120px);
+	  left: -40px;
+	  width: calc(100% + 120px);
+  }  
+  
+}
+
+@media (min-width:1900px) {
+  
+  html{
+    font-size: 32px;
   }
   
+  :root {
+    --left-indent: 30%;
+    --wedge-height: 650px;
+  }
+  
+  body {
+    font-weight: 650;
+  }
+  
+  .spiral-pattern-cw, .spiral-pattern-ccw {
+    // width: 180vmax;
+    // height: 180vmax;
+    // max-width: 2000px;
+    // max-height: 2000px;
+  }
   
 }
