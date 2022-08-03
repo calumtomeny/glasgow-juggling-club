@@ -32,6 +32,7 @@ function addScrollBehaviour(){
 
 	for(element in logoElements){
 		logoElements[element].style.transformOrigin = '50% 50%'
+		logoElements[element].style.transition = '0.2s ease-out'
 	}	
 	
 	document.addEventListener("scroll", function(){

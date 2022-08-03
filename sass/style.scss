@@ -102,6 +102,7 @@ section h2, section h3 {
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 3;
+  transition: 0.2s ease-out;
 }
 
 .banner {
@@ -202,7 +203,7 @@ section:first-child {
   }
   
   :root {
-	  --left-indent: 40%;
+	  --left-indent: 480px;
 	  --wedge-height: 420px;
     --logo-indent: calc(var(--wedge-height)*0.41);
     --angle: -17deg;
@@ -238,7 +239,7 @@ section:first-child {
   }
   
   :root {
-    --left-indent: calc(120% - 120vh);
+    --left-indent: calc(100% - 100vh);
     --wedge-height: 650px;
   }
   
