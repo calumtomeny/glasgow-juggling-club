@@ -136,18 +136,20 @@ section h2, section h3 {
   padding-top: calc(var(--logo-indent)*0.5);
 }
 
+.bulldozer {
+  height: calc(var(--wedge-height)*0.5);
+  min-height: 150px;
+}
+
 section {
   padding-left: var(--left-indent);
   width: 100%;
   height: calc(100vh - var(--logo-indent));
+  min-height: calc(var(--wedge-height)*1.7);
   display: grid;
   align-items: center;
   align-content: center;
   grid-gap: 40px;
-}
-
-section:first-child {
-  padding-top: 350px;
 }
 
 @keyframes bounce {
@@ -177,6 +179,10 @@ section:first-child {
     font-size: 22px;
   }
   
+  section {
+    min-height: calc(var(--wedge-height)*2);
+  }
+  
 }
 
 @media (min-width:600px) {
@@ -192,6 +198,14 @@ section:first-child {
   .banner-text{
     margin: 0 40px 0 var(--left-indent);
     max-width: 400px;
+  }
+  
+  .bulldozer {
+    height: calc(var(--wedge-height)*0.4);
+  }
+  
+  section {
+    min-height: calc(var(--wedge-height)*1.7);
   }
 
 }
@@ -228,7 +242,11 @@ section:first-child {
   .banner {
 	  left: -40px;
 	  width: calc(100% + 120px);
-  }  
+  }
+  
+  section {
+    min-height: calc(var(--wedge-height)*1.3);
+  }
   
 }
 
@@ -239,12 +257,20 @@ section:first-child {
   }
   
   :root {
-    --left-indent: calc(100% - 100vh);
+    --left-indent: 950px;
     --wedge-height: 650px;
   }
   
   body {
     font-weight: 650;
+  }
+  
+  .bulldozer {
+    height: 0px;
+  }
+  
+  section {
+    min-height: calc(var(--wedge-height)*1.2);
   }
   
 }

@@ -13,10 +13,10 @@ const fadeIn = function () {
 	const sectionBottom = section.getBoundingClientRect().bottom
 		
 	if (sectionTop < window.innerHeight / 2) {
-	  delay = 0.1
+	  delay = 0.05
 	  animatedTags.forEach(tag => {
 		tag.style.animation = `fadeIn 0.3s ${delay}s both`
-		delay += 0.1
+		delay += 0.05
 	  })      
 	} else {
 	  animatedTags.forEach(tag => {
