@@ -265,6 +265,14 @@ section {
     font-weight: 650;
   }
   
+  .banner {
+    width: calc(100% + 150px);
+  }
+  
+  .banner-text {
+    margin: 0 40px 0 calc(var(--left-indent) + 20px);
+  }
+  
   .bulldozer {
     height: 0px;
   }
