@@ -66,7 +66,7 @@ section h2, section h3 {
   top: 0px;
   width: 100%;
   height: var(--wedge-height);
-  overflow: hidden;
+  // overflow: hidden;
   background-color: var(--scout-hall);
   transform: skew(0, var(--angle));
   transform-origin: bottom left;
@@ -96,14 +96,32 @@ section h2, section h3 {
 .spiral-pattern-cw, .spiral-pattern-ccw {
   width: calc(var(--wedge-height)*6.3);
   height: calc(var(--wedge-height)*6.3);
-  mix-blend-mode: multiply;
-  opacity: 0.6;
+  // mix-blend-mode: multiply;
+  // opacity: 0.6;
   transform: rotate(0deg) translate(-50%, -50%);
   transform-origin: top left;
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 3;
   transition: 0.2s ease-out;
+}
+
+.circle-mask {
+  position: fixed;
+  width: 120%;
+  height: var(--wedge-height);
+  transform: rotate(var(--angle));
+  transform-origin: bottom left;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.counter-rotation {
+  width: 120%;
+  height:100%;
+  background-color: var(--scout-hall);
+  transform: rotate(calc(var(--angle) * -1));
+  transform-origin: bottom left;
 }
 
 .banner {
