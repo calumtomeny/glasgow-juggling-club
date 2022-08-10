@@ -1,6 +1,8 @@
 const logo = document.getElementById("svg-logo")
 const bgCW = document.querySelector(".spiral-pattern-cw")
 const bgCCW = document.querySelector(".spiral-pattern-ccw")
+const bgCWMain = document.querySelector(".spiral-pattern-cw.main")
+const bgCCWMain = document.querySelector(".spiral-pattern-ccw.main")
 const bannerText = document.querySelector(".banner-text")
 
 // const bg = document.getElementsByClassName("bg")
@@ -51,8 +53,10 @@ function addScrollBehaviour(){
 		}
 
 		bgCW.style.transform = 'rotate(' + (0 - scrollPosition * 40) + 'deg) translate(-50%, -50%)';
-		bgCCW.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
-		// bannerText.style.transform = 'translate(' + (0-(scrollPosition * 65)) + '%)';
+		bgCWMain.style.transform = 'rotate(' + (0 - scrollPosition * 40) + 'deg) translate(-50%, -50%)';
+		
+		bgCCW.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';		
+		bgCCWMain.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
 
 		
 	})

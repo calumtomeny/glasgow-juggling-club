@@ -42,6 +42,13 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 section h2 span, section h3 span, section p {
   transform: rotate(var(--angle));
   transform-origin: top left;
@@ -61,67 +68,68 @@ section h2, section h3 {
   line-height: 0.9;
 }
 
-.logo-bg-container{
+.logo-area{
   position: fixed;
   top: 0px;
-  width: 100%;
-  height: var(--wedge-height);
-  // overflow: hidden;
-  background-color: var(--scout-hall);
-  transform: skew(0, var(--angle));
+  
+  -webkit-mask-image: url("../images/mask-slant.svg");
+  mask-image: url("../images/mask-slant.svg");
+  mask-repeat: no-repeat;
+  
+  width: 3200px;
+  height: 1150px;
+  transform: translateY(calc(-100% + var(--wedge-height)));
   transform-origin: bottom left;
+  
+  background-color: var(--scout-hall);
   z-index: 2;
 }
 
-.logo, .spiral-pattern-cw, .spiral-pattern-ccw {
+.spiral-container.masked {
+  position: absolute;    
+  bottom: 0;
+  transform: translate(calc(-50% + var(--wedge-height) * 0.5), calc(50% - var(--wedge-height) * 0.6));
+}
+
+.spiral-container.main {
   position: fixed;
-  left: var(--logo-indent);
-  top: var(--logo-indent);
+  top: var(--wedge-height);
+  transform: translate(calc(-50% + var(--wedge-height) * 0.5), calc(-50% - var(--wedge-height) * 0.6));
 }
 
 .logo {
+  position: fixed;
   width: var(--logo-size);
   z-index: 4;
   transform: translate(-50%, -50%);
 }
 
-.spiral-pattern-cw {
-  background-image: url("../images/gjc-pattern-cw.svg");
+.spiral-pattern-cw.wedge {
+  background-image: url("../images/gjc-pattern-cw-wedge.svg");
 }
 
-.spiral-pattern-ccw {
-  background-image: url("../images/gjc-pattern-ccw.svg");
+.spiral-pattern-ccw.wedge {
+  background-image: url("../images/gjc-pattern-ccw-wedge.svg");
+}
+
+.spiral-pattern-cw.main {
+  background-image: url("../images/gjc-pattern-cw-main.svg");
+}
+
+.spiral-pattern-ccw.main {
+  background-image: url("../images/gjc-pattern-ccw-main.svg");
 }
 
 .spiral-pattern-cw, .spiral-pattern-ccw {
+  position: fixed;
   width: calc(var(--wedge-height)*6.3);
   height: calc(var(--wedge-height)*6.3);
-  // mix-blend-mode: multiply;
-  // opacity: 0.6;
+  
   transform: rotate(0deg) translate(-50%, -50%);
   transform-origin: top left;
+  
   background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: 3;
   transition: 0.2s ease-out;
-}
-
-.circle-mask {
-  position: fixed;
-  width: 120%;
-  height: var(--wedge-height);
-  transform: rotate(var(--angle));
-  transform-origin: bottom left;
-  z-index: 3;
-  overflow: hidden;
-}
-
-.counter-rotation {
-  width: 120%;
-  height:100%;
-  background-color: var(--scout-hall);
-  transform: rotate(calc(var(--angle) * -1));
-  transform-origin: bottom left;
 }
 
 .banner {
@@ -239,7 +247,6 @@ section {
 	  --left-indent: 480px;
 	  --wedge-height: 420px;
     --logo-indent: calc(var(--wedge-height)*0.41);
-    --angle: -17deg;
   }
   
   body {
