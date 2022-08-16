@@ -12,7 +12,7 @@
   
   --wedge-height: 300px;
   --logo-size: calc(var(--wedge-height)*0.6666666);
-  --logo-indent: calc(var(--wedge-height)*0.42);
+  --logo-indent: calc(var(--wedge-height)*0.08);
   
   --left-indent: 26px;
   --angle: -15deg;
@@ -71,41 +71,65 @@ section h2, section h3 {
 .logo-area{
   position: fixed;
   top: 0px;
-  
+  left: 0px;
+  height: var(--wedge-height);
+  z-index: 3;
+}
+
+.spiral-container.masked {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   -webkit-mask-image: url("../images/mask-slant.svg");
   mask-image: url("../images/mask-slant.svg");
   mask-repeat: no-repeat;
   
   width: 3200px;
   height: 1150px;
-  transform: translateY(calc(-100% + var(--wedge-height)));
   transform-origin: bottom left;
   
   background-color: var(--scout-hall);
-  z-index: 2;
-}
-
-.spiral-container.masked {
-  position: absolute;    
-  bottom: 0;
-  transform: translate(calc(-50% + var(--wedge-height) * 0.5), calc(50% - var(--wedge-height) * 0.6));
 }
 
 .spiral-container.main {
   position: fixed;
   top: var(--wedge-height);
-  transform: translate(calc(-50% + var(--wedge-height) * 0.5), calc(-50% - var(--wedge-height) * 0.6));
 }
 
 .logo {
-  position: fixed;
+  position: absolute;
+  bottom: 0;
+  left: var(--logo-indent);
   width: var(--logo-size);
-  z-index: 4;
-  transform: translate(-50%, -50%);
+  transform: translateY(calc((var(--wedge-height) * 0.25) * -1));
+}
+
+.spiral-pattern-cw, .spiral-pattern-ccw {
+  width: calc(var(--wedge-height)*6.3);
+  height: calc(var(--wedge-height)*6.3);
+  background-repeat: no-repeat;
+  
+  transform: rotate(0deg) translate(-50%, -50%);
+  transform-origin: top left;
+  
+  transition: 0.2s ease-out;
+}
+
+.spiral-pattern-cw.wedge, .spiral-pattern-ccw.wedge {
+  position: absolute;
+  top: calc(100% - (var(--logo-size) * 0.5) - (var(--wedge-height) * 0.25));
+  left: calc((var(--logo-size) * 0.5) + var(--logo-indent));
+}
+
+.spiral-pattern-cw.main, .spiral-pattern-ccw.main {
+  position: absolute;
+  top: calc(((var(--logo-size) * 0.5) + var(--wedge-height) * 0.25) * -1);
+  left: calc(var(--logo-size) * 0.5 + var(--logo-indent));
+  z-index: 2;
 }
 
 .spiral-pattern-cw.wedge {
-  background-image: url("../images/gjc-pattern-cw-wedge.svg");
+  background-image: url("../images/gjc-pattern-cw-wedge.svg");	
 }
 
 .spiral-pattern-ccw.wedge {
@@ -118,18 +142,6 @@ section h2, section h3 {
 
 .spiral-pattern-ccw.main {
   background-image: url("../images/gjc-pattern-ccw-main.svg");
-}
-
-.spiral-pattern-cw, .spiral-pattern-ccw {
-  position: fixed;
-  width: calc(var(--wedge-height)*6.3);
-  height: calc(var(--wedge-height)*6.3);
-  
-  transform: rotate(0deg) translate(-50%, -50%);
-  transform-origin: top left;
-  
-  background-repeat: no-repeat;
-  transition: 0.2s ease-out;
 }
 
 .banner {
@@ -246,7 +258,6 @@ section {
   :root {
 	  --left-indent: 480px;
 	  --wedge-height: 420px;
-    --logo-indent: calc(var(--wedge-height)*0.41);
   }
   
   body {
