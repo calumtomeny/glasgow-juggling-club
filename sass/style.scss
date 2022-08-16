@@ -112,7 +112,7 @@ section h2, section h3 {
   transform: rotate(0deg) translate(-50%, -50%);
   transform-origin: top left;
   
-  transition: 0.2s ease-out;
+  transition: rotate 0.2s ease-out;
 }
 
 .spiral-pattern-cw.wedge, .spiral-pattern-ccw.wedge {
@@ -125,7 +125,6 @@ section h2, section h3 {
   position: absolute;
   top: calc(((var(--logo-size) * 0.5) + var(--wedge-height) * 0.25) * -1);
   left: calc(var(--logo-size) * 0.5 + var(--logo-indent));
-  z-index: 2;
 }
 
 .spiral-pattern-cw.wedge {

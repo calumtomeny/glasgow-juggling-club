@@ -34,7 +34,7 @@ function addScrollBehaviour(){
 
 	for(element in logoElements){
 		logoElements[element].style.transformOrigin = '50% 50%'
-		logoElements[element].style.transition = '0.2s ease-out'
+		logoElements[element].style.transition = 'rotate 0.2s ease-out'
 	}	
 	
 	document.addEventListener("scroll", function(){
@@ -55,7 +55,7 @@ function addScrollBehaviour(){
 		bgCW.style.transform = 'rotate(' + (0 - scrollPosition * 40) + 'deg) translate(-50%, -50%)';
 		bgCWMain.style.transform = 'rotate(' + (0 - scrollPosition * 40) + 'deg) translate(-50%, -50%)';
 		
-		bgCCW.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';		
+		bgCCW.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
 		bgCCWMain.style.transform = 'rotate(' + (scrollPosition * 40) + 'deg) translate(-50%, -50%)';
 
 		
