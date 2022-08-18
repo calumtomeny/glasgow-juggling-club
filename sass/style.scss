@@ -113,6 +113,8 @@ section h2, section h3 {
   transform-origin: top left;
   
   transition: rotate 0.2s ease-out;
+  
+  pointer-events: none;
 }
 
 .spiral-pattern-cw.wedge, .spiral-pattern-ccw.wedge {
