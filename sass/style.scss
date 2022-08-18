@@ -18,13 +18,6 @@
   --angle: -15deg;
 }
 
-@font-face {
-  font-family: 'Cabinet Grotesk';
-  src: url('../fonts/CabinetGrotesk-Variable.woff2') format('woff2'), url('../fonts/CabinetGrotesk-Variable.woff') format('woff');
-  font-style: normal;
-  font-weight: 1 999;
-}
-
 html {
   height: 100%;
   font-size: 17px;
@@ -37,7 +30,6 @@ body {
   font-family: Cabinet Grotesk, Helvetica, San Francisco, sans-serif;
   line-height: 1.5;
   font-weight:700;
-  /* letter-spacing: 0.01em; */
   letter-spacing: -0.02em;
   -webkit-text-size-adjust: none;
 }
@@ -89,6 +81,8 @@ section h2, section h3 {
   transform-origin: bottom left;
   
   background-color: var(--scout-hall);
+  
+  pointer-events: none;
 }
 
 .spiral-container.main {
@@ -184,11 +178,11 @@ section h2, section h3 {
 section {
   padding-left: var(--left-indent);
   width: 100%;
-  height: calc(100vh - var(--logo-indent));
-  min-height: calc(var(--wedge-height)*1.7);
+  height: calc(100vh - var(--wedge-height));
+  min-height: 300px;
   display: grid;
-  align-items: center;
-  align-content: center;
+  align-items: start;
+  align-content: start;
   grid-gap: 40px;
   position: relative;
 }
@@ -224,8 +218,15 @@ section a .sr-only:not(:focus):not(:active) {
   width: 1px;
 }
 
+.location {
+  min-height: 600px;
+  align-items: end;
+  align-content: end;
+  margin-bottom: calc(100vh * 0.25);
+}
+
 .location a {
-  top: 56%;
+  bottom: 24px;
   left: 66%;
 }
 
@@ -244,29 +245,9 @@ section a .sr-only:not(:focus):not(:active) {
   animation: point 1s ease-out infinite;
 }
 
-.new-members .insta {
-  top: 56%;
-  left: 66%;
-}
-
-.new-members .insta .circular-text {
-  background-image: url("../images/gjc-insta-text.svg");
-}
-
-.new-members .insta .icon {
-  background-image: url("../images/gjc-insta-icon.svg");
-  width: 36px;
-  height: 36px;
-  transform-origin: 80% center;
-}
-
-.new-members .insta:hover .icon {
-  animation: wiggle 1s ease-out infinite;
-}
-
 .new-members .email {
-  top: 66%;
-  left: 56%;
+  bottom : 5vw;
+  left: 26px;
 }
 
 .new-members .email .circular-text {
@@ -284,9 +265,29 @@ section a .sr-only:not(:focus):not(:active) {
   animation: wiggle 1s ease-out infinite;
 }
 
+.new-members .insta {
+  bottom: 12vw;
+  left: calc(50% - 54px);
+}
+
+.new-members .insta .circular-text {
+  background-image: url("../images/gjc-insta-text.svg");
+}
+
+.new-members .insta .icon {
+  background-image: url("../images/gjc-insta-icon.svg");
+  width: 36px;
+  height: 36px;
+  transform-origin: 80% center;
+}
+
+.new-members .insta:hover .icon {
+  animation: wiggle 1s ease-out infinite;
+}
+
 .new-members .facebook {
-  top: 70%;
-  left: 46%;
+  bottom: 20vw;
+  right: 26px;
 }
 
 .new-members .facebook .circular-text {
@@ -352,8 +353,12 @@ section a .sr-only:not(:focus):not(:active) {
     font-size: 22px;
   }
   
+  .location {
+    min-height: 670px;;
+  }
+  
   section {
-    min-height: calc(var(--wedge-height)*2);
+    min-height: 340px;
   }
   
 }
@@ -377,8 +382,31 @@ section a .sr-only:not(:focus):not(:active) {
     height: calc(var(--wedge-height)*0.4);
   }
   
+  .location {
+    min-height: 625px;;
+  }
+
+  .location a {
+    left: 66%;
+  }
+  
   section {
-    min-height: calc(var(--wedge-height)*1.7);
+    min-height: 400px;
+  }
+  
+  .new-members .email {
+    bottom: 55%;
+    left: 6%;
+  }
+  
+  .new-members .insta {
+    bottom: 18%;
+    right: 26px;
+  }
+  
+  .new-members .facebook {
+    bottom: 62%;
+    right: 6%;
   }
 
 }
@@ -415,8 +443,52 @@ section a .sr-only:not(:focus):not(:active) {
 	  width: calc(100% + 120px);
   }
   
-  section {
-    min-height: calc(var(--wedge-height)*1.3);
+  .location {
+    min-height: calc(var(--wedge-height)*1.75);
+  }
+  
+  section a {
+    width: 156px;
+    height: 156px;
+  }
+  
+  .location a .icon {
+    width: 70px;
+    height: 48px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .email .icon {
+    width: 64px;
+    height: 49px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .insta .icon {
+    width: 50px;
+    height: 50px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .facebook .icon {
+    width: 53px;
+    height: 53px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .email {
+    bottom: 50%;
+    left: 20%;
+  }
+  
+  .new-members .insta {
+    bottom: 10%;
+    left: 60%;
+  }
+  
+  .new-members .facebook {
+    bottom: 62%;
+    right: 12%;
   }
   
 }
@@ -448,8 +520,61 @@ section a .sr-only:not(:focus):not(:active) {
     height: 0px;
   }
   
+  .location {
+    min-height: 950px;
+  }
+  
   section {
-    min-height: calc(var(--wedge-height)*1.2);
+    min-height: 600px;
+  }
+  
+  section a {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .location a .icon {
+    width: 90px;
+    height: 61px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .email .icon {
+    width: 83px;
+    height: 63px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .insta .icon {
+    width: 65px;
+    height: 65px;
+    transform-origin: 80% center;
+  }
+  
+  .new-members .facebook .icon {
+    width: 69px;
+    height: 69px;
+    transform-origin: 80% center;
+  }
+
+  .location a {
+    left: calc(var(--left-indent) - 20%);
+  }
+
+  .new-members .email {
+    bottom: 50%;
+    left: calc(var(--left-indent) - 20%);
+  }
+  
+  .new-members .insta {
+    bottom: 15%;
+    left: calc(var(--left-indent) + 10%);
+  }
+  
+  .new-members .facebook {
+    bottom: 90%;
+    right: auto;
+    left: calc(var(--left-indent) + 35%);
   }
   
 }
