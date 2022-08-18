@@ -236,7 +236,7 @@ section {
 }
 
 .location a:hover .pointer {
-  animation: point 1.5s ease-out infinite;
+  animation: point 1s ease-out infinite;
 }
 
 @keyframes bounce {
@@ -249,7 +249,7 @@ section {
   0% {transform: translate(-50%, -50%) rotate(0deg); }
   25% {transform: translate(-55%, -55%) rotate(7deg); }
   50% {transform: translate(-40%, -50%) rotate(0deg); }
-  75% {transform: translate(-55%, -45%) rotate(-7deg); }
+  75% {transform: translate(-55%, -50%) rotate(0deg); }
   100% {transform: translate(-50%, -50%) rotate(0deg); }
 }
 
