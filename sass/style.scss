@@ -476,19 +476,24 @@ section a .sr-only:not(:focus):not(:active) {
     transform-origin: 80% center;
   }
   
+  .location a {
+    left: calc(var(--left-indent) + 30%);
+  }
+  
   .new-members .email {
     bottom: 50%;
-    left: 20%;
+    left: calc(var(--left-indent) - 20%);
   }
   
   .new-members .insta {
     bottom: 10%;
-    left: 60%;
+    left: calc(var(--left-indent) + 10%);
   }
   
   .new-members .facebook {
     bottom: 62%;
-    right: 12%;
+    right: auto;
+    left: calc(var(--left-indent) + 35%);
   }
   
 }
@@ -556,25 +561,17 @@ section a .sr-only:not(:focus):not(:active) {
     height: 69px;
     transform-origin: 80% center;
   }
-
-  .location a {
-    left: calc(var(--left-indent) - 20%);
-  }
-
+  
   .new-members .email {
     bottom: 50%;
-    left: calc(var(--left-indent) - 20%);
   }
   
   .new-members .insta {
     bottom: 15%;
-    left: calc(var(--left-indent) + 10%);
   }
   
   .new-members .facebook {
     bottom: 90%;
-    right: auto;
-    left: calc(var(--left-indent) + 35%);
   }
   
 }
