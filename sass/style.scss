@@ -190,13 +190,31 @@ section {
   align-items: center;
   align-content: center;
   grid-gap: 40px;
-}
-
-.location {
   position: relative;
 }
 
-.location a .sr-only:not(:focus):not(:active) {
+section a {
+  position: absolute;
+  width: 106px;
+  height: 106px;
+}
+
+section a .circular-text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  animation: revolve 20s linear infinite;
+}
+
+section a .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+section a .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0); 
   clip-path: inset(50%);
   height: 1px;
@@ -207,36 +225,83 @@ section {
 }
 
 .location a {
-  position: absolute;
   top: 56%;
   left: 66%;
-  width: 106px;
-  height: 106px;
-  border-radius: 50%;
-  // background-color: var(--night);
 }
 
 .location a .circular-text {
   background-image: url("../images/gjc-directions-text.svg");
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  animation: revolve 20s linear infinite;
 }
 
-.location a .pointer {
-  background-image: url("../images/gjc-directions-manicule.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
+.location a .icon {
+  background-image: url("../images/gjc-directions-icon.svg");
   width: 50px;
   height: 34px;
   transform-origin: 80% center;
 }
 
-.location a:hover .pointer {
+.location a:hover .icon {
   animation: point 1s ease-out infinite;
+}
+
+.new-members .insta {
+  top: 56%;
+  left: 66%;
+}
+
+.new-members .insta .circular-text {
+  background-image: url("../images/gjc-insta-text.svg");
+}
+
+.new-members .insta .icon {
+  background-image: url("../images/gjc-insta-icon.svg");
+  width: 36px;
+  height: 36px;
+  transform-origin: 80% center;
+}
+
+.new-members .insta:hover .icon {
+  animation: wiggle 1s ease-out infinite;
+}
+
+.new-members .email {
+  top: 66%;
+  left: 56%;
+}
+
+.new-members .email .circular-text {
+  background-image: url("../images/gjc-email-text.svg");
+}
+
+.new-members .email .icon {
+  background-image: url("../images/gjc-email-icon.svg");
+  width: 46px;
+  height: 35px;
+  transform-origin: 80% center;
+}
+
+.new-members .email:hover .icon {
+  animation: wiggle 1s ease-out infinite;
+}
+
+.new-members .facebook {
+  top: 70%;
+  left: 46%;
+}
+
+.new-members .facebook .circular-text {
+  background-image: url("../images/gjc-facebook-text.svg");
+}
+
+.new-members .facebook .icon {
+  background-image: url("../images/gjc-facebook-icon.svg");
+  width: 38px;
+  height: 38px;
+  transform-origin: 80% center;
+}
+
+.new-members .facebook:hover .icon {
+  animation: wiggle 1s ease-out infinite;
 }
 
 @keyframes bounce {
@@ -247,9 +312,17 @@ section {
 
 @keyframes point {
   0% {transform: translate(-50%, -50%) rotate(0deg); }
-  25% {transform: translate(-55%, -55%) rotate(7deg); }
+  25% {transform: translate(-55%, -55%) rotate(-7deg); }
   50% {transform: translate(-40%, -50%) rotate(0deg); }
   75% {transform: translate(-55%, -50%) rotate(0deg); }
+  100% {transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes wiggle {
+  0% {transform: translate(-50%, -50%) rotate(0deg); }
+  25% {transform: translate(-55%, -65%) rotate(-7deg); }
+  50% {transform: translate(-50%, -50%) rotate(0deg); }
+  75% {transform: translate(-45%, -65%) rotate(7deg); }
   100% {transform: translate(-50%, -50%) rotate(0deg); }
 }
 
