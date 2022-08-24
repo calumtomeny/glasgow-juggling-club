@@ -9,6 +9,7 @@
   --dk02: #D6D0FF;
   --dk01: #E1DDFB;
   --up: #B0EAEE;
+  --down: #FDCECD;
   
   --wedge-height: 300px;
   --logo-size: calc(var(--wedge-height)*0.6666666);
@@ -32,6 +33,10 @@ body {
   font-weight:700;
   letter-spacing: -0.02em;
   -webkit-text-size-adjust: none;
+}
+
+a {
+  color: var(--down);
 }
 
 main {
@@ -82,7 +87,7 @@ section h2, section h3 {
   
   background-color: var(--scout-hall);
   
-  pointer-events: none;
+  // pointer-events: none;
 }
 
 .spiral-container.main {
@@ -170,6 +175,10 @@ section h2, section h3 {
   padding-top: calc(var(--logo-indent)*0.5);
 }
 
+.content-container.narrow {
+  padding-right: 10%;
+}
+
 .bulldozer {
   height: calc(var(--wedge-height)*0.5);
   min-height: 150px;
@@ -187,13 +196,13 @@ section {
   position: relative;
 }
 
-section a {
+section .link {
   position: absolute;
   width: 106px;
   height: 106px;
 }
 
-section a .circular-text{
+section .link .circular-text{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -201,14 +210,14 @@ section a .circular-text{
   animation: revolve 20s linear infinite;
 }
 
-section a .icon {
+section .link .icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
 }
 
-section a .sr-only:not(:focus):not(:active) {
+section .link .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0); 
   clip-path: inset(50%);
   height: 1px;
@@ -225,23 +234,23 @@ section a .sr-only:not(:focus):not(:active) {
   margin-bottom: calc(100vh * 0.25);
 }
 
-.location a {
+.location .link {
   bottom: 24px;
   left: 66%;
 }
 
-.location a .circular-text {
+.location .link .circular-text {
   background-image: url("../images/gjc-directions-text.svg");
 }
 
-.location a .icon {
+.location .link .icon {
   background-image: url("../images/gjc-directions-icon.svg");
   width: 50px;
   height: 34px;
   transform-origin: 80% center;
 }
 
-.location a:hover .icon {
+.location .link:hover .icon {
   animation: point 1s ease-out infinite;
 }
 
@@ -386,7 +395,7 @@ section a .sr-only:not(:focus):not(:active) {
     min-height: 625px;;
   }
 
-  .location a {
+  .location .link {
     left: 66%;
   }
   
@@ -447,12 +456,12 @@ section a .sr-only:not(:focus):not(:active) {
     min-height: calc(var(--wedge-height)*1.75);
   }
   
-  section a {
+  section .link {
     width: 156px;
     height: 156px;
   }
   
-  .location a .icon {
+  .location .link .icon {
     width: 70px;
     height: 48px;
     transform-origin: 80% center;
@@ -476,7 +485,7 @@ section a .sr-only:not(:focus):not(:active) {
     transform-origin: 80% center;
   }
   
-  .location a {
+  .location .link {
     left: calc(var(--left-indent) + 30%);
   }
   
@@ -533,12 +542,12 @@ section a .sr-only:not(:focus):not(:active) {
     min-height: 580px;
   }
   
-  section a {
+  section .link {
     width: 200px;
     height: 200px;
   }
   
-  .location a .icon {
+  .location .link .icon {
     width: 90px;
     height: 61px;
     transform-origin: 80% center;
