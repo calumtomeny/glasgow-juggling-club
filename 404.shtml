@@ -12,7 +12,7 @@
       <div class="logo-area">
         <div class="spiral-container masked">
           <h1>
-            <object type="image/svg+xml" data="images/gjc-logo.svg" id="svg-logo" class="logo"">
+            <object type="image/svg+xml" data="images/gjc-logo.svg" id="svg-logo" class="logo"" alt="Glasgow Juggling Club Logo">
               Glasgow Juggling Club
             </object>
           </h1>
