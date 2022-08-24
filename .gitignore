@@ -1,4 +1,3 @@
 /styles/style.css
 /node_modules/
-fonts/.DS_Store
-styles/.DS_Store
+.DS_Store

@@ -4,39 +4,42 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Page not found · Glasgow Juggling Club</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
+    <title>Page not found – Glasgow Juggling Club – 404</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="icon" href="images/favicon.ico" />
   </head>
   <body>
-    <header>
-      <div class="key-info">
-        <h1>
-          <img src="images/gjc-logo.svg" alt="Glasgow Juggling Club"/>
-        </h1>
-        <h2>
-          Every Wednesday
-        </h2>
-        <h2>7:30<span class="subscript">pm</span></h2>
+      <div class="logo-area">
+        <div class="spiral-container masked">
+          <h1>
+            <object type="image/svg+xml" data="images/gjc-logo.svg" id="svg-logo" class="logo"" alt="Glasgow Juggling Club Logo">
+              Glasgow Juggling Club
+            </object>
+          </h1>
+          <div class="spiral-pattern-cw wedge"></div>
+          <div class="spiral-pattern-ccw wedge"></div>
+        </div>
       </div>
-    </header>
-
-    <section class="main">
-      <div class="infoblock container">
-        <h2>
-          We dropped one!
-        </h2>
+      
+      <div class="banner">
+        <div class="banner-text">
+          <h2>Every Wednesday</h2>
+          <h2>7:30pm</h2>
+          <h2>All Welcome!</h2>
+        </div>
       </div>
-      <div class="infoblock container">
-        <h2>
-          The page you’re looking for has been moved or rolled under the sofa.
-        </h2>
-        <p>
-          <a href="/">Take me home!</a>
-        </p>
-      </div>
-    </section>
+      
+      <div class="content-container narrow">
+        <div class="spiral-container main">
+          <div class="spiral-pattern-cw main"></div>
+          <div class="spiral-pattern-ccw main"></div>
+        </div>
+        <section class="location">
+          <h2 class="high-priority"><span>We dropped one!</span></h2>
+          <p>The page you’re looking for has been moved or rolled under the sofa.</p>
+          <h3><span><a href="/">Take me home</a></span></h3>
+        </section>
+  
   </body>
 </html>
+<script src="scripts/text-animation.js"></script>
