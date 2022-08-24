@@ -2,7 +2,12 @@
 
 This is the website of Glasgow Juggling Club
 
+### Main build
 [![Build Status](https://dev.azure.com/tomeny/glasgowjugglingclub/_apis/build/status/glasgowjugglingclub-CI?branchName=master)](https://dev.azure.com/tomeny/glasgowjugglingclub/_build/latest?definitionId=5&branchName=master)
+
+### Redesign build
+
+[![Build Status](https://dev.azure.com/tomeny/glasgowjugglingclub/_apis/build/status/glasgowjugglingclub-redesign?branchName=redesign)](https://dev.azure.com/tomeny/glasgowjugglingclub/_build/latest?definitionId=13&branchName=redesign)
 
 ## Getting Started
 
