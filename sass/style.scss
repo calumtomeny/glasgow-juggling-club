@@ -1,5 +1,6 @@
 
-@import 'sass/reset.scss', 'sass/fonts.scss';
+@use './reset' as *;
+@use './fonts' as *;
 :root {
   --scout-hall: #FFFF80;
   --sh02: #FFF6A3;
@@ -47,7 +48,7 @@ main {
 }
 
 section h2 span, section h3 span, section p {
-  transform: rotate(var(--angle));
+  transform: rotate(var(--angle, 0deg));
   transform-origin: top left;
   background-color: none;
   display: block;
@@ -149,7 +150,7 @@ section h2, section h3 {
   position: fixed;
   top: var(--wedge-height);
   left: -40px;
-  transform: rotate(var(--angle));
+  transform: rotate(var(--angle, 0deg));
   transform-origin: 0% 50%;
   padding: 10px 50px 10px 70px;
   width: calc(100% + 80px);
@@ -342,18 +343,18 @@ section .link .sr-only:not(:focus):not(:active) {
 }
 
 #Face {
-  animation: bounce 3s ease-in-out infinite;
   transform-origin: 50% 50%;
+  animation: bounce 3s ease-in-out infinite;
 }
 
-@keyFrames fadeIn {
+@keyframes fadeIn {
   0% { opacity: 0; transform: translate(80px, 80px) rotate(0deg); }
-  100% { opacity: 1; transform: translate(0px, 0px) rotate(var(--angle)); }
+  100% { opacity: 1; transform: translate(0px, 0px) rotate(var(--angle, 0deg)); }
 }
 
-@keyFrames fadeOut {
-  0% { opacity: 1; transform: translate(0px, 0px) rotate(var(--angle)); }
-  100% { opacity: 0; transform: translateX(80px, 80px) rotate(0deg); }
+@keyframes fadeOut {
+  0% { opacity: 1; transform: translate(0px, 0px) rotate(var(--angle, 0deg)); }
+  100% { opacity: 0; transform: translate(80px, 80px) rotate(0deg); }
 }
 
 @media (min-width:430px) {

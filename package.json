@@ -4,8 +4,8 @@
   "description": "The website for Glasgow Juggling Club.",
   "main": "index.js",
   "scripts": {
-    "build:sass": "node-sass -r --output-style compressed sass/style.scss -o styles/",
-    "watch:sass": "npm run build:sass && npm run build:sass -- -w"
+    "build:sass": "sass sass/style.scss styles/style.css --style compressed",
+    "watch:sass": "sass --watch sass/style.scss styles/style.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
   "homepage": "https://github.com/calumtomeny/glasgow-juggling-club#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^7.0.0"
+    "sass": "^1.97.1"
   }
 }
